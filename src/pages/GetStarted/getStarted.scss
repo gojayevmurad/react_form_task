@@ -1,0 +1,102 @@
+.get_started {
+  .intro {
+    z-index: -1;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    color: #fff;
+    &--header {
+      margin-bottom: 30px;
+      svg {
+        width: 13rem;
+        height: 1.75rem;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    & > p {
+      max-width: 240px;
+      font-size: 14px;
+    }
+  }
+  .decorations {
+    svg.color-dec {
+      z-index: -1;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 791px;
+      height: 653px;
+    }
+  }
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 40px 0 0 40px;
+    margin-top: 40px;
+    &__form {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      ul:not(.options--list) {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+        left: 40px;
+        z-index: -1;
+        li {
+          background-color: var(--color-grey);
+          padding: 10px 42px;
+          padding-right: 90px;
+          border-radius: 25px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          font-size: 16px;
+          &[data-active="true"] {
+            position: absolute;
+            padding-left: 100px;
+            margin-right: 20px;
+            left: -50px;
+            background-color: #103557;
+            color: var(--color-white);
+            & > div {
+              position: absolute;
+              left: 16px;
+            }
+          }
+        }
+      }
+      form {
+        background-color: var(--color-white);
+        padding: 2.5rem;
+        height: 611px;
+        width: 575px;
+        margin-right: 8rem;
+        padding: 32px 44px;
+        position: relative;
+        --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+          0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+          0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+    }
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #038477;
+}

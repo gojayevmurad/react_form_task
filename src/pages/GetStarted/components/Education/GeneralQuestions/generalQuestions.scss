@@ -1,0 +1,62 @@
+.general-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & > span {
+    font-size: 18px;
+    display: inline-block;
+  }
+  label {
+    & > div {
+      margin-top: 10px;
+    }
+  }
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    .step {
+      &.active {
+        color: var(--color-white);
+        background-color: var(--color-green);
+      }
+      transition: 0.15s linear;
+      background-color: var(--color-grey);
+      color: var(--color-green);
+      width: 100%;
+      text-align: center;
+      border-radius: 7px;
+    }
+  }
+}
+
+button.next,
+button.prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  bottom: -5rem;
+  width: 180px;
+  padding: 14px 0;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+
+button.next {
+  border: 1px solid white;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 16px;
+  right: 0;
+}
+
+button.prev {
+  left: 0;
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  font-size: 16px;
+  background-color: transparent;
+}
